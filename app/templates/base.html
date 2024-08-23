@@ -122,11 +122,10 @@
                   <div class="col-md-5">
                     <div class="detail-box">
                       <h1>
-                        For All Your <br>
-                        Furniture Needs
+                        {{header_text.1.title}}
                       </h1>
                       <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                        {{header_text.1.description}}
                       </p>
                       <div class="btn-box">
                         <a href="" class="btn1">
@@ -152,11 +151,10 @@
                   <div class="col-md-5">
                     <div class="detail-box">
                       <h1>
-                        For All Your <br>
-                        Furniture Needs
+                        {{header_text.2.title}}
                       </h1>
                       <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                        {{header_text.2.description}}
                       </p>
                       <div class="btn-box">
                         <a href="" class="btn1">
@@ -193,10 +191,10 @@
       <div class="container">
         <div class="heading_container">
           <h2>
-            Our Furniture
+            {{ header_text.3.title }}
           </h2>
           <p>
-            which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't an
+            {{ header_text.3.description }}
           </p>
         </div>
         <div class="row">
@@ -207,12 +205,10 @@
                 <img src="{% static "images/f1.png" %}" alt="">
               </div>
               <div class="detail-box">
-                <h5>
-                  brown Chair Design
-                </h5>
+                <h5>{{mini_blocks.0.title}}</h5>
                 <div class="price_box">
                   <h6 class="price_heading">
-                    <span>$</span> 100.00
+                    <span>$</span> {{mini_blocks.0.price}}
                   </h6>
                   <a href="">
                     Buy Now
@@ -228,11 +224,11 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Double Bed Design
+                  {{mini_blocks.1.title}}
                 </h5>
                 <div class="price_box">
                   <h6 class="price_heading">
-                    <span>$</span> 200.00
+                    <span>$</span> {{mini_blocks.1.price}}
                   </h6>
                   <a href="">
                     Buy Now
@@ -248,11 +244,11 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  House Chair Design
+                  {{mini_blocks.2.title}}
                 </h5>
                 <div class="price_box">
                   <h6 class="price_heading">
-                    <span>$</span> 200.00
+                    <span>$</span> {{mini_blocks.2.price}}
                   </h6>
                   <a href="">
                     Buy Now
@@ -268,11 +264,11 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  brown Table Design
+                  {{mini_blocks.3.title}}
                 </h5>
                 <div class="price_box">
                   <h6 class="price_heading">
-                    <span>$</span> 100.00
+                    <span>$</span> {{mini_blocks.3.price}}
                   </h6>
                   <a href="">
                     Buy Now
@@ -288,11 +284,11 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Blue Chair Design
+                  {{mini_blocks.4.title}}
                 </h5>
                 <div class="price_box">
                   <h6 class="price_heading">
-                    <span>$</span> 200.00
+                    <span>$</span> {{mini_blocks.4.price}}
                   </h6>
                   <a href="">
                     Buy Now
@@ -308,11 +304,11 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Brown Table Design
+                  {{mini_blocks.5.title}}
                 </h5>
                 <div class="price_box">
                   <h6 class="price_heading">
-                    <span>$</span> 200.00
+                    <span>$</span> {{mini_blocks.5.price}}
                   </h6>
                   <a href="">
                     Buy Now
@@ -321,7 +317,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -343,11 +338,11 @@
             <div class="detail-box">
               <div class="heading_container">
                 <h2>
-                  About Us
+                  {{ header_text.4.title }}
                 </h2>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorem eum consequuntur ipsam repellat dolor soluta aliquid laborum, eius odit consectetur vel quasi in quidem, eveniet ab est corporis tempore.
+                {{ header_text.4.description }}
               </p>
               <a href="">
                 Read More
@@ -366,7 +361,7 @@
       <div class="container">
         <div class="heading_container">
           <h2>
-            Latest Blog
+            {{ header_text.5.title }}
           </h2>
         </div>
         <div class="row">
@@ -377,10 +372,10 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Look even slightly believable. If you are
+                  {{tree_blocks.0.title}}
                 </h5>
                 <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                  {{tree_blocks.0.description}}
                 </p>
                 <a href="">
                   Read More
@@ -395,10 +390,10 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Anything embarrassing hidden in the middle
+                  {{tree_blocks.1.title}}
                 </h5>
                 <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                  {{tree_blocks.1.description}}
                 </p>
                 <a href="">
                   Read More
@@ -413,10 +408,10 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Molestias magni natus dolores odio commodi. Quaerat!
+                  {{tree_blocks.2.title}}
                 </h5>
                 <p>
-                  alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                  {{tree_blocks.2.description}}
                 </p>
                 <a href="">
                   Read More
@@ -452,13 +447,11 @@
                       <div class="name">
                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                         <h6>
-                          Siaalya
+                          {{ testimonial.0.title }}
                         </h6>
                       </div>
                       <p>
-                        It is a long established fact that a reader will be
-                        distracted by the readable cIt is a long established fact
-                        that a reader will be distracted by the readable c
+                        {{ testimonial.0.description }}
                       </p>
                     </div>
                   </div>
@@ -476,13 +469,11 @@
                       <div class="name">
                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                         <h6>
-                          Siaalya
+                          {{ testimonial.1.title }}
                         </h6>
                       </div>
                       <p>
-                        It is a long established fact that a reader will be
-                        distracted by the readable cIt is a long established fact
-                        that a reader will be distracted by the readable c
+                        {{ testimonial.1.description }}
                       </p>
                     </div>
                   </div>
@@ -500,13 +491,11 @@
                       <div class="name">
                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                         <h6>
-                          Siaalya
+                          {{ testimonial.2.title }}
                         </h6>
                       </div>
                       <p>
-                        It is a long established fact that a reader will be
-                        distracted by the readable cIt is a long established fact
-                        that a reader will be distracted by the readable c
+                        {{ testimonial.2.description }}
                       </p>
                     </div>
                   </div>
