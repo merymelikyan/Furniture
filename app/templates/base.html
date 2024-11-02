@@ -94,14 +94,96 @@
     {% block blog_template %}{% endblock %}  
     {% block contact_template %}{% endblock %} 
 
-    <!-- furniture section -->
+    <!-- info section -->
+    <section class="info_section long_section">
 
+      <div class="container">
+        <div class="contact_nav">
+          <a href="">
+            <i class="{{info_section.phone_class}}" aria-hidden="true"></i>
+            <span>
+              Call : {{info_section.phone}}
+            </span>
+          </a>
+          <a href="">
+            <i class="{{info_section.email_class}}" aria-hidden="true"></i>
+            <span>
+              Email : {{info_section.email}}
+            </span>
+          </a>
+          <a href="">
+            <i class="{{info_section.location_class}}" aria-hidden="true"></i>
+            <span>
+              {{info_section.title}}
+            </span>
+          </a>
+        </div>
+  
+        <div class="info_top ">
+          <div class="row ">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="info_links">
+                <h4>
+                  QUICK LINKS
+                </h4>
+                <div class="info_links_menu">
+                  <a class="" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                  <a class="" href="{% url 'about' %}"> About</a>
+                  <a class="" href="{% url 'furniture' %}">Furniture</a>
+                  <a class="" href="{% url 'blog' %}">Blog</a>
+                  <a class="" href="{% url 'contact' %}">Contact Us</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+              <div class="info_post">
+                <h5>
+                  INSTAGRAM FEEDS
+                </h5>
+                <div class="post_box">
+                  {% for block in mini_blocks %}
+                    <div class="img-box">
+                      <img src="{{block.image.url}}" alt="">
+                    </div>
+                  {% endfor %}  
+      
+  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="info_form">
+                <h4>
+                  SIGN UP TO OUR NEWSLETTER
+                </h4>
+                <form action="">
+                  <input type="text" placeholder="Enter Your Email" />
+                  <button type="submit">
+                    Subscribe
+                  </button>
+                </form>
+                <div class="social_box">
+                  {% for social in socials %}
+                    <div class="{{social.title}}">
+                      <a href="{{social.url}}">
+                        <i class="{{social.html_class}}"  target="_blank" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  {% endfor %}
+            
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- footer section -->
     <footer class="footer_section">
       <div class="container">
-        <p> <span id="displayYear"></span> {{footer_text.text}}
-          <a href="https://html.design/"></a> 
+        <p>{{footer_text.text1}} <span id="displayYear"></span> {{footer_text.text2}}
+         <a href="{{footer_text.link_url}}">{{footer_text.link_name}}</a> 
         </p>
       </div>
     </footer>

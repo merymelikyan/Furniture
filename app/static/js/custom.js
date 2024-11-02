@@ -42,3 +42,19 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
+
+$("#contact").on("submit", (e) => {
+	e.preventDefault();
+	const data = {
+		'name': $('input[name=name]').val(),
+        'number': $('input[name=number]').val(),
+		'email': $('input[name=email]').val(),
+		'content': $('textarea[name=content]').val(),
+		'csrfmiddlewaretoken': '{{ csrf_token }}'
+	};
+	$.post("http://127.0.0.1:8000/messages/receive_message/", data, () => {
+		console.log("all is okay");
+	});
+
+	e.target.reset();
+	});

@@ -6,6 +6,7 @@ from .models import (
     FooterText, 
     MiniBlocks,
     TreeBlocks,
+    TestimonialMain,
     Testimonial,
     About,
     Furniture,
@@ -20,6 +21,7 @@ admin.site.register(HeaderText)
 admin.site.register(FooterText)
 admin.site.register( MiniBlocks)
 admin.site.register( TreeBlocks)
+admin.site.register( TestimonialMain)
 admin.site.register( Testimonial)
 admin.site.register( About)
 admin.site.register( Furniture)

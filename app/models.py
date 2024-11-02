@@ -2,8 +2,9 @@ from django.db import models
 from django.utils import timezone
 
 class HeaderText(models.Model):
-    title = models.CharField(max_length=255)
-    description = models.TextField(max_length=255)
+    title = models.CharField(max_length=255, blank=True, null=True)
+    description = models.TextField(max_length=255, blank=True, null=True)
+    image = models.ImageField(upload_to="header_text", blank=True, null=True)
 
     def __str__(self):
         return self.title
@@ -14,10 +15,13 @@ class HeaderText(models.Model):
 
 
 class FooterText(models.Model):
-    text = models.CharField(max_length=255)
+    text1 = models.CharField(max_length=255, blank=True, null=True)
+    text2 = models.CharField(max_length=255, blank=True, null=True)
+    link_url = models.URLField(max_length=200, blank=True, null=True)
+    link_name = models.CharField(max_length=255, blank=True, null=True)
         
     def __str__(self):
-        return self.text
+        return f"{self.text2}"
 
     class Meta:
         verbose_name = "Footer Text"
@@ -49,6 +53,17 @@ class TreeBlocks(models.Model):
     class Meta:
         verbose_name = "Tree Block"
         verbose_name_plural = "Tree Blocks"
+
+
+class TestimonialMain(models.Model):
+    title = models.CharField(max_length=255)
+    
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Testimonial Main"
+        verbose_name_plural = "Testimonial Main" 
 
 
 class Testimonial(models.Model):
